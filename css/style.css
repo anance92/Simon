@@ -1,7 +1,7 @@
 .bg {
     width: 100vw;
     height: 100vh;
-    background-image: radial-gradient(#3EC9F8,#5E6A91);
+    background-image: radial-gradient(#3e4142,#292a2c);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,7 +17,7 @@
     background-color: #e7e7e7; 
     position: relative;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 70px;
     margin-bottom: 0;
     display: block;
 }
@@ -58,11 +58,11 @@
     height: 500px;
     position: relative;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 200px;
     border: 20px;
 }
 
-#green1 {
+#green0 {
     background-image: radial-gradient( green, darkgreen);
     top: 0%;
     left: 0%;
@@ -72,11 +72,11 @@
     width: 250px;
 }
 
-#green1:active {
+#green0:active {
     background-image: radial-gradient( greenyellow, green);
 }
 
-#red2 {
+#red1 {
     background-image: radial-gradient( red, darkred);
     left: 50%;
     position: absolute;
@@ -85,11 +85,11 @@
     width: 250px;
 }
 
-#red2:active {
+#red1:active {
     background-image: radial-gradient( orange, red);
 }
 
-#blue3 {
+#blue2 {
     background-image: radial-gradient( blue, darkblue);
     top: 50%;
     left: 50%;
@@ -99,11 +99,11 @@
     width: 250px;
 }
 
-#blue3:active {
+#blue2:active {
     background-image: radial-gradient( rgb(0, 162, 255), blue);
 }
 
-#yellow4 {
+#yellow3 {
     background-image: radial-gradient( yellow, goldenrod);
     top: 50%;
     left: 0%;
@@ -113,17 +113,17 @@
     width: 250px;
 }
 
-#yellow4:active {
+#yellow3:active {
     background-image: radial-gradient( rgb(240, 228, 207), yellow);
 }
 
-/* #innerCircle {
+#innerCircle {
     border-radius: 50%;
     background-image: radial-gradient( grey, rgb(68, 67, 67));
     width: 250px;
     height: 250px;
     position: absolute;
     margin: auto;
-    margin-top: 150px;
+    margin-top: 125px;
     left: 25%;
-} */
+}
