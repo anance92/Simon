@@ -76,6 +76,10 @@
     background-image: radial-gradient( greenyellow, green);
 }
 
+#green0:hover {
+    box-shadow: 0 0 20px 0 darkgreen, 0 1px 0 0 darkgreen;
+}
+
 #red1 {
     background-image: radial-gradient( red, darkred);
     left: 50%;
@@ -87,6 +91,10 @@
 
 #red1:active {
     background-image: radial-gradient( orange, red);
+}
+
+#red1:hover {
+    box-shadow: 0 0 20px 0 darkred;
 }
 
 #blue2 {
@@ -103,6 +111,10 @@
     background-image: radial-gradient( rgb(0, 162, 255), blue);
 }
 
+#blue2:hover {
+    box-shadow: 0 0 20px 0 darkblue, 0 1px 0 0 darkblue;
+}
+
 #yellow3 {
     background-image: radial-gradient( yellow, goldenrod);
     top: 50%;
@@ -115,6 +127,10 @@
 
 #yellow3:active {
     background-image: radial-gradient( rgb(240, 228, 207), yellow);
+}
+
+#yellow3:hover {
+    box-shadow: 0 0 20px 0 goldenrod;
 }
 
 #innerCircle {
