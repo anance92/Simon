@@ -1,0 +1,76 @@
+#start {
+    border-radius: 12px;
+    padding: 10px 24px;
+    font-size: 20px;
+    background-color: #e7e7e7; 
+    position: relative;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 0;
+    display: block;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#gameBoard {
+    border-radius: 50%;
+    background-color: black;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    margin: auto;
+    margin-top: 50px;
+}
+
+#green1 {
+    background-image: radial-gradient( green, darkgreen);
+    top: 0%;
+    left: 0%;
+    position: absolute;
+    border-radius: 250px 0 0 0;
+    height: 250px;
+    width: 250px;
+}
+
+/* #green1 .active {
+    background-color: greenyellow;
+} */
+
+#red2 {
+    background-image: radial-gradient( red, darkred);
+    left: 50%;
+    position: absolute;
+    border-radius: 0 250px 0 0;
+    height: 250px;
+    width: 250px;
+}
+
+#blue3 {
+    background-image: radial-gradient( blue, darkblue);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    border-radius: 0 0 250px 0;
+    height: 250px;
+    width: 250px;
+}
+
+#yellow4 {
+    background-image: radial-gradient( yellow, goldenrod);
+    top: 50%;
+    left: 0%;
+    position: absolute;
+    border-radius: 0 0 0 250px;
+    height: 250px;
+    width: 250px;
+}
+
+/* #innerCircle {
+    border-radius: 50%;
+    background-image: radial-gradient( grey, rgb(68, 67, 67));
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    margin: auto;
+    margin-top: 150px;
+    left: 25%;
+} */
