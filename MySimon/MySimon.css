@@ -83,6 +83,13 @@
     height: 250px;
     width: 250px; */
 }
+#green0:active {
+    background-image: radial-gradient( greenyellow, green);
+}
+
+#green0:hover {
+    box-shadow: 0 0 20px 0 darkgreen, 0 1px 0 0 darkgreen;
+}
 
 #red1 {
   position: absolute;
@@ -104,6 +111,14 @@
     /* width: 250px; */
 }
 
+#red1:active {
+    background-image: radial-gradient( orange, red);
+}
+
+#red1:hover {
+    box-shadow: 0 0 20px 0 darkred;
+}
+
 #blue2 {
   position: absolute;
   height: 250px;
@@ -123,6 +138,15 @@
     /* border-radius: 0 0 250px 0; */
     /* height: 250px; */
     /* width: 250px; */
+}
+
+
+#blue2:active {
+    background-image: radial-gradient( rgb(0, 162, 255), blue);
+}
+
+#blue2:hover {
+    box-shadow: 0 0 20px 0 darkblue, 0 1px 0 0 darkblue;
 }
 
 #yellow3 {
@@ -147,6 +171,13 @@
     /* width: 250px; */
 }
 
+#yellow3:active {
+    background-image: radial-gradient( rgb(240, 228, 207), yellow);
+}
+
+#yellow3:hover {
+    box-shadow: 0 0 20px 0 goldenrod;
+}
 
 #innerCircle {
 	
@@ -162,7 +193,7 @@
   margin: -125px 0px 0px -125px;
   box-sizing: border-box;
     /* border-radius: 50%; */
-    /* background-image: radial-gradient( grey, rgb(68, 67, 67)); */
+    background-image: radial-gradient( rgb(216, 212, 212), rgb(109, 108, 108));
     /* width: 250px; */
     /* height: 250px; */
     /* position: absolute; */
