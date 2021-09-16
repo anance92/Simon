@@ -1,0 +1,172 @@
+.bg {
+    width: 100vw;
+    height: 100vh;
+    background-image: radial-gradient(#3e4142,#292a2c);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#start {
+    border-radius: 12px;
+    padding: 10px 24px;
+    font-size: 20px;
+    border: 0;
+    background-color: #e7e7e7; 
+    position: relative;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 0;
+    display: block;
+}
+
+#stop {
+    border-radius: 12px;
+    padding: 10px 24px;
+    font-size: 20px;
+    border: 0;
+    background-color: #e7e7e7; 
+    position: relative;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 0;
+    display: block;
+}
+
+#start:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#start:active {
+    background: #d3d1d1;
+}
+
+#stop:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#stop:active {
+    background: #d3d1d1;
+}
+
+/* #gameBoard {
+    border-radius: 50%;
+    background-color: black;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    margin: auto;
+    margin-top: 200px;
+    border: 20px;
+} */
+
+#green0 {
+	
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  border-radius: 250px 0 0 0;
+  background: darkgreen;
+  top: 50%;
+  left: 50%;
+  margin: -250px 0px 0px -250px;
+  border-style: solid;
+  border-width: 5px;
+  box-sizing: border-box;
+    /* background-color: "green";
+    top: 0%;
+    left: 0%;
+    position: absolute;
+    border-radius: 250px 0 0 0;
+    height: 250px;
+    width: 250px; */
+}
+
+#red1 {
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  border-radius: 0 250px 0 0;
+  background: darkred;
+  top: 50%;
+  left: 50%;
+  margin: -250px 0px 0px 0px;
+  border-style: solid;
+  border-width: 5px;
+  box-sizing: border-box;
+    /* background-color: "red"; */
+    /* left: 50%; */
+    /* position: absolute; */
+    /* border-radius: 0 250px 0 0; */
+    /* height: 250px; */
+    /* width: 250px; */
+}
+
+#blue2 {
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  border-radius: 0 0 250px 0;
+  background: darkblue;
+  top: 50%;
+  left: 50%;
+  margin: 0px 0px -250px 0px;
+  border-style: solid;
+  border-width: 5px;
+  box-sizing: border-box;
+    /* background-color: "blue"; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* position: absolute; */
+    /* border-radius: 0 0 250px 0; */
+    /* height: 250px; */
+    /* width: 250px; */
+}
+
+#yellow3 {
+	
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  border-radius: 0 0 0 250px;
+  background: goldenrod;
+  top: 50%;
+  left: 50%;
+  margin: 0px -250px 0px -250px;
+  border-style: solid;
+  border-width: 5px;
+  box-sizing: border-box;
+   /* background-color: "yellow"; */
+    /* top: 50%; */
+    /* left: 0%; */
+    /* position: absolute; */
+    /* border-radius: 0 0 0 250px; */
+    /* height: 250px; */
+    /* width: 250px; */
+}
+
+
+#innerCircle {
+	
+  position: absolute;
+  background: grey;
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  border-style: solid;
+  border-width: 10px;
+  top: 50%;
+  left: 50%;
+  margin: -125px 0px 0px -125px;
+  box-sizing: border-box;
+    /* border-radius: 50%; */
+    /* background-image: radial-gradient( grey, rgb(68, 67, 67)); */
+    /* width: 250px; */
+    /* height: 250px; */
+    /* position: absolute; */
+    /* margin: auto; */
+    /* margin-top: 125px; */
+    /* left: 25%; */
+}
