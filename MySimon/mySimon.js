@@ -117,7 +117,12 @@ function check(){
 			good = false;
 	
 	if (good == false){
-		flashColor();		
+		flashColor();
+		let high = Number(document.getElementById("highScore").innerHTML);
+		console.log(high);
+		if(turn > high){
+			document.getElementById("highScore").innerHTML = turn;
+		}
 		let audio = document.getElementById("wrongClip");
 		clearInterval(intervalId);
 		audio.play();
