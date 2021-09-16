@@ -5,6 +5,8 @@ let turn; //keeps track of turn
 let good; //Boolean to keep tabs of player being good
 let compTurn;// Boolean tracks computer/player turn
 let intervalId;
+let delay = 200;
+let delay2 = 800
 
 const turnCounter = document.querySelector("#turn");
 const greenButton = document.querySelector("#green0");
@@ -13,35 +15,28 @@ const yellowButton = document.querySelector("#yellow3");
 const blueButton = document.querySelector("#blue2");
 const startButton = document.querySelector("#start");
 const stopButton = document.querySelector("#stop");
+//const turnTotal = document.querySelector(#turnTotal");
 
 startButton.addEventListener('click', (event) => {
+	clearInterval(intervalId);
 	play();
 });
 
 stopButton.addEventListener('click', (event) => {
-	win = false;
-	order = [];
-	playerOrder=[];
-	flash = 0;
-	intervalId = 0;
-	turn = 1;
-	good = false;
+	clearInterval(intervalId);
+	initialize();
 });
 
 function play(){
-	win = false;
-	order = [];
-	playerOrder=[];
-	flash = 0;
-	intervalId = 0;
-	turn = 1;
-	good = true;
+	initialize();
+	document.getElementById("turnTotal").innerHTML = turn;
 	order.push(Math.floor(Math.random()*4 + 1));
 	compTurn = true;	
 	intervalId = setInterval(gameTurn, 800);
 }
 
 function gameTurn(){
+		delay -= 50;
 	if (flash == turn){
 		clearInterval(intervalId);
 		compTurn = false;
@@ -56,7 +51,7 @@ function gameTurn(){
 			if (order[flash] == 3) buttonActions(yellowButton, "yellowClip", "yellow");
 			if (order[flash] == 4) buttonActions(blueButton, "blueClip", "lightskyblue");
 			flash++;
-		}, 200)
+		}, delay)
 	}
 }
 
@@ -124,8 +119,10 @@ function check(){
 	if (good == false){
 		flashColor();		
 		let audio = document.getElementById("wrongClip");
+		clearInterval(intervalId);
 		audio.play();
 		alert('Wrong one Try again');
+		document.getElementById("turnTotal").innerHTML = 0;
 	}
 	
 	if (turn == playerOrder.length && good){
@@ -133,6 +130,7 @@ function check(){
 		playerOrder = [];
 		compTurn = true;
 		flash = 0;
+		document.getElementById("turnTotal").innerHTML = turn;
 		order.push(Math.floor(Math.random()*4 + 1));
 		intervalId = setInterval(gameTurn, 800);
 	}
@@ -143,6 +141,19 @@ function flashColor(){
 	redButton.style.backgroundColor = "tomato";
 	yellowButton.style.backgroundColor = "yellow";
 	blueButton.style.backgroundColor = "lightskyblue";	
+}
+
+function initialize(){
+	flashColor();
+	clearColor();
+	win = false;
+	order = [];
+	playerOrder=[];
+	flash = 0;
+	intervalId = 0;
+	turn = 1;
+	good = true;
+	document.getElementById("turnTotal").innerHTML = 0;
 }
 
 // function winGame(){
