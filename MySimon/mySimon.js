@@ -7,6 +7,10 @@ let compTurn;// Boolean tracks computer/player turn
 let intervalId;
 let delay = 200;
 let delay2 = 800
+let greenPush = "7";
+let redPush = "9";
+let yellowPush = "1";
+let bluePush = "3";
 
 const turnCounter = document.querySelector("#turn");
 const greenButton = document.querySelector("#green0");
@@ -15,7 +19,7 @@ const yellowButton = document.querySelector("#yellow3");
 const blueButton = document.querySelector("#blue2");
 const startButton = document.querySelector("#start");
 const stopButton = document.querySelector("#stop");
-//const turnTotal = document.querySelector(#turnTotal");
+const customizeButton = document.querySelector("#customize");
 
 startButton.addEventListener('click', (event) => {
 	clearInterval(intervalId);
@@ -27,6 +31,12 @@ stopButton.addEventListener('click', (event) => {
 	initialize();
 });
 
+customizeButton.addEventListener('click', (event) => {
+	greenPush = prompt("What key do you want to use to press the green button?");
+	redPush = prompt("What key do you want to use to press the red button?");
+	yellowPush = prompt("What key do you want to use to press the yellow button?");
+	bluePush = prompt("What key do you want to use to press the blue button?");
+});
 function play(){
 	initialize();
 	document.getElementById("turnTotal").innerHTML = turn;
@@ -69,48 +79,22 @@ function clearColor(){
 }
 
 greenButton.addEventListener('click', (event) => {
-	playerOrder.push(1);
-	check();
-	buttonActions(greenButton,"greenClip","lightgreen")
-	if(!win){
-		setTimeout(() => {
-			clearColor();
-		}, 300);
-	}
+	onClick(1, "greenClip", "lightgreen",greenButton);
 })
 
 redButton.addEventListener('click', (event) => {
-	playerOrder.push(2);
-	check();
-	buttonActions(redButton, "redClip", "tomato");
-	if(!win){
-		setTimeout(() => {
-			clearColor();
-		}, 300);
-	}
+	onClick(2, "redClip", "tomato", redButton);
 })
 
 yellowButton.addEventListener('click', (event) => {
-	playerOrder.push(3);
-	check();
-	buttonActions(yellowButton, "yellowClip", "yellow");
-	if(!win){
-		setTimeout(() => {
-			clearColor();
-		}, 300);
-	}
+	onClick(3, "yellowClip", "yellow", yellowButton);
 })
 
 blueButton.addEventListener('click', (event) => {
-	playerOrder.push(4);
-	check();
-	buttonActions(blueButton, "blueClip", "lightskyblue");
-	if(!win){
-		setTimeout(() => {
-			clearColor();
-		}, 300);
-	}
+	onClick(4, "blueClip", "lightskyblue", blueButton);
 })
+
+
 
 function check(){
 	if (playerOrder[playerOrder.length- 1] != order[playerOrder.length - 1])
@@ -160,7 +144,38 @@ function initialize(){
 	good = true;
 	document.getElementById("turnTotal").innerHTML = 0;
 }
+window.addEventListener("keydown", function (event) {
+  if (event.defaultPrevented) {
+    return; // Do nothing if the event was already processed
+  }
+  
+  switch(event.key){
+	  case greenPush:
+		onClick(1, "greenClip", "lightgreen", greenButton);
+		break;
+	  case redPush:
+		onClick(2, "redClip", "tomato", redButton);
+		break;
+	  case yellowPush:
+		onClick(3, "yellowClip", "yellow", yellowButton);
+		break;
+	  case bluePush:
+		onClick(4, "blueClip", "lightskyblue", blueButton);
+		break;	
+  }
+});
 
+function onClick(num, clip, color, buttonChange){
+	playerOrder.push(num);
+		check();
+		buttonActions(buttonChange,clip,color)
+		if(!win){
+			setTimeout(() => {
+				clearColor();
+			}, 300);
+		}
+	
+}
 // function winGame(){
 	// flashColor();
 	// on = false;
