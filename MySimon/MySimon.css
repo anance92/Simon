@@ -1,6 +1,6 @@
 .bg {
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     background-image: radial-gradient(#3e4142,#292a2c);
     display: flex;
     flex-direction: column;
@@ -33,6 +33,15 @@
     margin-top: 10px;
     margin-bottom: 0;
     display: block;
+}
+
+#message {
+    background-color: rgb(214, 211, 211);
+    padding: 20px;
+    font-weight: bold;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
 }
 
 #start:hover {

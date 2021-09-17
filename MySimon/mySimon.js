@@ -30,7 +30,8 @@ startButton.addEventListener('click', (event) => {
 stopButton.addEventListener('click', (event) => {
     clearInterval(intervalId);
     initialize();
-    alert('Thanks for playing. Goodbye.');
+    // alert('Thanks for playing. Goodbye.');
+    document.getElementById("message").innerHTML = "Thanks for playing. Goodbye!";
 });
 
 customizeButton.addEventListener('click', (event) => {
@@ -61,7 +62,8 @@ function gameTurn() {
 
         timer.start(1000);
         timer.reset(timerReset);
-        alert('Your Turn.!Give your best try!');
+        // alert('Your Turn! Give your best try!');
+        document.getElementById("message").innerHTML = "Your Turn! Give your best try!";
     }
 
     if (compTurn) {
@@ -129,7 +131,8 @@ function check() {
         let audio = document.getElementById("wrongClip");
         clearInterval(intervalId);
         audio.play();
-        alert('Wrong one, Try again. Select Start or End Game.');
+        // alert('Wrong one, Try again. Select Start or End Game.');
+        document.getElementById("message").innerHTML = "Wrong one. Try again. Select Start or End Game.";
         document.getElementById("turnTotal").innerHTML = 0;
     }
 
@@ -142,7 +145,7 @@ function check() {
         order.push(Math.floor(Math.random() * 4 + 1));
         intervalId = setInterval(gameTurn, 800);
 
-        setTimeout(function() { alert('Correct!'); }, 1);
+        setTimeout(function() { document.getElementById("message").innerHTML = "Correct!"; }, 1);
     }
 }
 
@@ -296,7 +299,8 @@ $(document).ready(function(e) {
         function(time) {
             if (time == 0) {
                 timer.stop();
-                alert('Time out. You lose. Select Start or End Game');
+                // alert('Time out! You lose. Select Start or End Game');
+                document.getElementById("message").innerHTML = "Time out! You lose. Select Start or End Game";
             }
         }
     );
