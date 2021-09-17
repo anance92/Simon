@@ -1,0 +1,164 @@
+.bg {
+    width: 100vw;
+    height: 80vh;
+    background-image: radial-gradient(#3e4142,#292a2c);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#start {
+    border-radius: 12px;
+    padding: 10px 24px;
+    font-size: 20px;
+    border: 0;
+    background-color: #e7e7e7; 
+    position: relative;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 0;
+    display: block;
+}
+
+#stop {
+    border-radius: 12px;
+    padding: 10px 24px;
+    font-size: 20px;
+    border: 0;
+    background-color: #e7e7e7; 
+    position: relative;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 0;
+    display: block;
+}
+
+#message {
+	/* margin-top: 100px; */
+    background-color: rgb(214, 211, 211);
+    /*padding: 20px; */
+    font-weight: bold;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+}
+
+#start:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#start:active {
+    background: #d3d1d1;
+}
+
+#stop:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#stop:active {
+    background: #d3d1d1;
+}
+
+#green0 {
+  position: relative;
+  height: 250px;
+  width: 250px;
+  border-radius: 250px 0 0 0;
+  background: darkgreen;
+  top: 50%;
+  left: 50%;
+  margin: -250px 0px 0px -250px;
+  border-style: solid;
+  border-color: green;
+  box-sizing: border-box;
+}
+
+#green0:active {
+    background-image: radial-gradient( greenyellow, green);
+}
+
+#green0:hover {
+    box-shadow: 0 0 20px 0 darkgreen, 0 1px 0 0 darkgreen;
+}
+
+#red1 {
+  position: relative;
+  height: 250px;
+  width: 250px;
+  border-radius: 0 250px 0 0;
+  background: darkred;
+  top: 50%;
+  left: 50%;
+  margin: -250px 0px 0px 0px;
+  border-style: solid;
+  border-color: red;
+  box-sizing: border-box;
+}
+
+#red1:active {
+    background-image: radial-gradient( orange, red);
+}
+
+#red1:hover {
+    box-shadow: 0 0 20px 0 darkred;
+}
+
+#blue2 {
+  position: relative;
+  height: 250px;
+  width: 250px;
+  border-radius: 0 0 250px 0;
+  background: darkblue;
+  top: 50%;
+  left: 50%;
+  margin: 0px 0px -250px 0px;
+  border-style: solid;
+  border-color: blue;
+  box-sizing: border-box;
+}
+
+#blue2:active {
+    background-image: radial-gradient( rgb(0, 162, 255), blue);
+}
+
+#blue2:hover {
+    box-shadow: 0 0 20px 0 darkblue, 0 1px 0 0 darkblue;
+}
+
+#yellow3 {
+	
+  position: relative;
+  height: 250px;
+  width: 250px;
+  border-radius: 0 0 0 250px;
+  background: goldenrod;
+  top: 50%;
+  left: 50%;
+  margin: 0px -250px 0px -250px;
+  border-style: solid;
+  border-color: gold;
+  box-sizing: border-box;
+}
+
+#yellow3:active {
+    background-image: radial-gradient( rgb(240, 228, 207), yellow);
+}
+
+#yellow3:hover {
+    box-shadow: 0 0 20px 0 goldenrod;
+}
+
+#innerCircle {	
+  position: absolute;
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  border-style: solid;
+  background-image: radial-gradient( rgb(185, 181, 181), rgb(68, 67, 67));
+  top: 60.5%;
+  left: 51.5%;
+  margin: -125px 0px 0px -125px;
+  box-sizing: border-box;
+}
