@@ -33,10 +33,15 @@ stopButton.addEventListener('click', (event) => {
 
 customizeButton.addEventListener('click', (event) => {
 	greenPush = prompt("What key do you want to use to press the green button?");
+	document.getElementById("greenValue").innerHTML = greenPush;
 	redPush = prompt("What key do you want to use to press the red button?");
+	document.getElementById("redValue").innerHTML = redPush;
 	yellowPush = prompt("What key do you want to use to press the yellow button?");
+	document.getElementById("yellowValue").innerHTML = yellowPush;
 	bluePush = prompt("What key do you want to use to press the blue button?");
+	document.getElementById("blueValue").innerHTML = bluePush;
 });
+
 function play(){
 	initialize();
 	document.getElementById("turnTotal").innerHTML = turn;
